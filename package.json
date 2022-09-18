@@ -1,0 +1,33 @@
+{
+  "name": "tinder-clone-2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tailwindcss/forms": "^0.5.2",
+    "@use-gesture/react": "^10.2.18",
+    "formik": "^2.2.9",
+    "framer-motion": "^7.2.1",
+    "next": "12.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "react-spring": "^9.5.2",
+    "react-tinder-card": "^1.4.5",
+    "swiper": "^8.3.2",
+    "tailwind-scrollbar-hide": "^1.1.7",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.8",
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.3",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
+  }
+}
