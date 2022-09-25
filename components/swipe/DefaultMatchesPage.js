@@ -69,7 +69,7 @@ transition:{
 
 <div className="w-3/4 " >
 <h1 className="text-center text-2xl font-semibold my-3">Start Matching</h1>
-<p className="text-center text-gray-500">Matches will appear here once you start to Like people. You can message them directly from here when you're ready to spark up the conversation</p>
+<p className="text-center text-gray-500">Matches will appear here once you start to Like people. You can message them directly from here when you{"'"}re ready to spark up the conversation</p>
 </div>
 
 

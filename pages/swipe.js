@@ -32,6 +32,8 @@ const handleMatches=()=>{
     setIsMessages(false);
 }
 
+console.log("Photos:",photos)
+
 
 
 return(
@@ -45,7 +47,7 @@ return(
 
 <button className="flex items-center justify-center space-x-2 rounded-full h-fit px-4 py-1 hover:bg-black hover:bg-opacity-20 ">
 <span>
-    <Image src={'/assets/mary-2.jpeg'} alt={`Profile Picture`} width={35} height={35} className="rounded-full text-white text-[10px]"/>
+    <Image src={'/assets/man-1.jpg'} alt={`Profile Picture`} width={35} height={35} className="rounded-full text-white text-[10px]"/>
 </span>
 <span className="text-white font-medium">
 {firstName}  

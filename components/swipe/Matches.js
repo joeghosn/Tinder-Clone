@@ -9,13 +9,10 @@ import {UserContext} from "../../contexts/user";
 
 const Matches=({index,firstName,age,job,location,gender,showGender,photos})=>{
 
-const [isDeleting,setIsDeleting]=useState(false);
 const {user,setUser}=useContext(UserContext)
 const {matches}=user;
 
-const controls=useAnimation();
-const offset=useMotionValue(0);
-const opacity=useTransform(offset,[0,-165,-330],[1,0.2,0])
+
 
 
 
@@ -37,39 +34,18 @@ const variants={
         }
     }
 
+
+
    
 
-const handlePan=(event,info)=>{
-    const x=info.offset.x;
-    if(x<0){
-        controls.set({x:x>-330?x:-330});
-        setIsDeleting(true);
-    }
-}
 
-const handlePanEnd=(event,info)=>{
-    const x=info.offset.x;
-    if(x<=-165){
-     
-        matches=matches.filter((match)=>{
-            return match!==matches[index];
-            });
-            setUser({
-            ...user,
-            matches,
-            })   
-     
-    }else{
-        controls.start({x:0})    
-    }
-}
 
 
 
     return(
-        <motion.div layout variants={variants} initial={"hidden"} animate={isDeleting?controls:"visible"} exit={"exit"} style={{x:offset, opacity}} onPan={handlePan} onPanEnd={handlePanEnd} className="flex space-x-2  py-3 px-3  bg-gray-100 bg-opacity-20 ">
+        <motion.div layout variants={variants} initial={"hidden"} animate={"visible"} exit={"exit"}   className="flex space-x-2  py-3 px-3  bg-gray-100 bg-opacity-20 ">
 
-            <Image src={photos[1]} alt='Profile Picture' width={52} height={52} className='rounded-full'/>
+            <Image src={matches[index].photos[0]} alt='Profile Picture' width={52} height={52} className='rounded-full'/>
 
             <div className="flex flex-col">
 
